@@ -160,6 +160,96 @@ for key,value in user_0.items():
 for name in user_0.keys():     
 	print(name.title()) 
 
+for name in sorted(user_0.keys()):
+	print(name.title())
+for value in user_0.values():
+	print(value.title())
+for value in set(user_0.values()):
+	print(value)
+alien_0 = {'color': 'green', 'points': 5} 
+alien_1 = {'color': 'yellow', 'points': 10} 
+alien_2 = {'color': 'red', 'points': 15}
+aliens=[alien_0,alien_1,alien_2]
+for alien in aliens:
+	print(alien)
+
+aliens=[]
+for alien_number in range(30):
+	new_alien={'color' : 'green','point' : 5,'speed' : 'slow'}
+	aliens.append(new_alien)
+for alien in aliens[:5]:
+	print(alien)
+print (str(len(aliens)))
+for alien in aliens[0:3]:
+	if alien['color']=='green' :
+		alien['color']='yellow'
+		alien['point']=3
+	elif alien['color']=='yellow':
+		alien['color']='red'
+		alien['point']=2
+	print(alien)
+pizza={
+	'crust' : 'thick',
+	'topping' : ['mushrooms','extra cheese'],
+	}
+print("You ordered a " + pizza['crust'] + "-crust pizza " +     "with the following toppings:")
+for topping in pizza['topping']:
+	print('\t'+topping)
+favorite_languages = {
+     'jen': ['python', 'ruby'],
+     'sarah': ['c'],
+     'edward': ['ruby', 'go'],     
+     'phil': ['python', 'haskell'],     
+     } 
+for name,value in favorite_languages.items():
+	print(name+"最喜欢的语言是")
+	if len(value)>1:
+		for language in value:
+			print(language)
+	else:
+		print("仅此一种")
+#第七章 用户输入和while循环
+message = input("tell me something: ")
+print(message)
+name = input("Please enter your name: ") 
+print("Hello, " + name + "!") 
+age=input("how old are you? ")
+age=int(age)
+if age>18:
+	print("你太老了")
+else:
+	print("你很年轻")
+a=1
+while a<=5:
+	print(a)
+	a+=1
+prompt = "\nTell me something, and I will repeat it back to you:" 
+prompt += "\nEnter 'quit' to end the program. "
+message = "" 
+while message != 'quit':     
+	message = input(prompt)   
+	if message != 'quit':   
+		print(message) 
+unconfirmed_users = ['alice', 'brian', 'candace'] 
+confirmed_users = [] 
+while unconfirmed_users:
+	 current_user = unconfirmed_users.pop()
+	 print("Verifying user: " + current_user.title()) 
+	 confirmed_users.append(current_user) 
+print("\nThe following users have been confirmed:") 
+for confirmed_user in confirmed_users:     
+	print(confirmed_user.title()) 
+pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat'] 
+print(pets) 
+ 
+while 'cat' in pets:     
+	pets.remove('cat')      
+print(pets) 
+#下一章学习函数
+ 
+
+
+
 
 	
 	
