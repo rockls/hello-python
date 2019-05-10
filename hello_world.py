@@ -230,6 +230,7 @@ while message != 'quit':
 	message = input(prompt)   
 	if message != 'quit':   
 		print(message) 
+		
 unconfirmed_users = ['alice', 'brian', 'candace'] 
 confirmed_users = [] 
 while unconfirmed_users:
@@ -245,8 +246,45 @@ print(pets)
 while 'cat' in pets:     
 	pets.remove('cat')      
 print(pets) 
-#下一章学习函数
- 
+#第八章函数
+def greet_user():
+	print("hello")
+greet_user()
+
+def greet_user(username,age):
+	print(username.title())
+greet_user("siqi",5)
+
+greet_user(username="siqi",age=5)
+
+def greet_user(username,age=6):
+	print(username.title()+" "+str(age))
+greet_user(username="siqi")
+greet_user(username="liu",age=5)
+
+def get_formatted_name(first_name, last_name, middle_name=''):
+	if middle_name:         
+		full_name = first_name + ' ' + middle_name + ' ' + last_name      
+	else:         
+		full_name = first_name + ' ' + last_name    
+	return full_name.title() 
+musician = get_formatted_name('jimi', 'hendrix') 
+print(musician) 
+musician = get_formatted_name('john', 'hooker', 'lee')
+print(musician) 
+
+def build_person(first_name, last_name,age=""):     
+	person = {'first': first_name, 'last': last_name}    
+	 if age:        
+		  person['age'] = age 
+	return person 
+musician = build_person('jimi', 'hendrix',34) 
+print(musician)
+
+#8.4
+
+
+
 
 
 
