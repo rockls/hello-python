@@ -180,8 +180,35 @@ try:
 except FileNotFoundError:
 	msg = "Sorry, the file " + filename + " does not exist."     
 	print(msg) 
+	#Python有一个pass语句，可在代码块中使用它来让Python什么都不要做
+	pass
 
-#10.3.6 分析版本
+title = "Alice in wonderland"
+a=title.split()
+print(a)
+
+#10.4 存储数据
+import json
+
+numbers=[1,2,3,4,5,11]
+filename='numbers.json'
+with open(filename, 'w') as f_obj:
+	json.dump(numbers,f_obj)
+	
+with open(filename) as f_obj:
+	numbers=json.load(f_obj)
+print(numbers)
+
+#11.1 测试函数
+
+def 
+
+
+
+
+
+
+
 
 	
 	
